@@ -1084,3 +1084,110 @@ body{
     }
 }
 
+/* =========================================
+   MOBILE RESPONSIVENESS (Add to bottom of CSS)
+   ========================================= */
+
+@media only screen and (max-width: 768px) {
+
+    /* --- 1. Header Fixes --- */
+    .header__main {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .sub_main_header--maincontent {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .sub_main_header--searchbar {
+        width: 90%;
+        flex-direction: column; /* Stack input and button */
+        padding: 10px;
+        gap: 10px;
+        height: auto; /* Remove fixed height if any */
+    }
+
+    .sub_main_header--searchbar input {
+        width: 100%; /* Fix rigid 500px width */
+        text-align: center;
+    }
+
+    .sub_mainheader--searchbar .search_button {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* --- 2. Card Sections (Menu, Spot, Trip, Iconic) --- */
+    /* This forces the row of cards to become a vertical column */
+    .menu-container, 
+    .spot-container, 
+    .trip-container, 
+    .iconic-container {
+        flex-direction: column;
+        gap: 30px;
+        padding: 10px;
+    }
+
+    /* Make cards take up full width on mobile */
+    .menu-card, 
+    .spot-card, 
+    .trip-card, 
+    .iconic-card {
+        width: 100%;
+        margin: 0 auto; /* Center them */
+    }
+
+    .menu-card img, 
+    .spot-card img, 
+    .trip-card img, 
+    .iconic-card img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    /* --- 3. Bike Section (The biggest layout breaker) --- */
+    .bike {
+        width: 90%; /* Stop it from overflowing */
+        margin: 20px auto; /* Remove the 70px left margin */
+        padding: 20px;
+    }
+
+    .bike-container {
+        width: 100%; /* Remove fixed 500px width */
+        flex-direction: column; /* Stack image on top of text */
+        gap: 20px;
+        align-items: center;
+    }
+
+    .bike-desc {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    /* --- 4. Footer Tweaks --- */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-section {
+        flex-basis: 100%;
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .footer-bottom-bar {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .settings-and-social {
+        align-items: center; /* Center social icons */
+        width: 100%;
+    }
+}
