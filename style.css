@@ -1084,5 +1084,72 @@ body{
     }
 }
 
+/* Paste this inside @media (max-width: 600px) { ... } */
+
+/* 1. Stack the cards vertically */
+.menu-card,
+.spot-card,
+.trip-card,
+.iconic-card {
+    width: 100%;        /* Forces card to take full width */
+    margin-bottom: 30px; /* Adds space between the stacked cards */
+    height: auto;        /* Ensures height adjusts automatically */
+}
+/* Paste this inside @media (max-width: 600px) { ... } */
+
+/* 2. Fix the Header Layout */
+.header__main {
+    flex-direction: column; /* Stacks Logo and Sign-in vertically */
+    align-items: center;    /* Centers them */
+    gap: 15px;
+}
+
+.sub__header {
+    display: none; /* Hides the "Discover, Trips, Reviews" links on mobile */
+}
+/* Paste this inside @media (max-width: 600px) { ... } */
+
+/* 3. Search Bar Adjustment */
+.sub_main_header--searchbar {
+    width: 90%;           /* Fits within the mobile screen width */
+    padding: 5px 10px;    /* Reduces padding to save space */
+    box-sizing: border-box;
+}
+
+.sub_main_header--searchbar input {
+    width: 100%;          /* Input field takes available space */
+    min-width: 0;         /* Prevents overflow issues */
+}
+/* ... existing desktop styles ... */
+
+/* MOBILE MEDIA QUERY */
+@media (max-width: 600px) {
+    
+    /* 1. Stack Cards */
+    .menu-card, .spot-card, .trip-card, .iconic-card {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    /* 2. Fix Header */
+    .header__main {
+        flex-direction: column;
+        align-items: center;
+    }
+    .sub__header {
+        display: none;
+    }
+
+    /* 3. Fix Search Bar */
+    .sub_main_header--searchbar {
+        width: 90%;
+        padding: 5px;
+    }
+    .sub_main_header--searchbar input {
+        width: 100%; 
+    }
+}
+
+
 
 
